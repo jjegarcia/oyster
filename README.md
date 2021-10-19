@@ -43,10 +43,14 @@ I need to know where I've travelled from -->
 
 [comment]: <> (I want to know what zone a station is in)
 
-In order to be charged correctly
-As a customer
-I need a penalty charge deducted if I fail to touch in or out
+[comment]: <> (In order to be charged correctly)
 
-In order to be charged the correct amount
-As a customer
-I need to have the correct fare calculated
+[comment]: <> (As a customer)
+
+[comment]: <> (I need a penalty charge deducted if I fail to touch in or out)
+
+[comment]: <> (In order to be charged the correct amount)
+
+[comment]: <> (As a customer)
+
+[comment]: <> (I need to have the correct fare calculated)
