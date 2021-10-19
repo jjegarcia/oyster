@@ -37,9 +37,11 @@ I need to know where I've travelled from -->
 
 [comment]: <> (I want to see to all my previous trips)
 
-In order to know how far I have travelled
-As a customer
-I want to know what zone a station is in
+[comment]: <> (In order to know how far I have travelled)
+
+[comment]: <> (As a customer)
+
+[comment]: <> (I want to know what zone a station is in)
 
 In order to be charged correctly
 As a customer

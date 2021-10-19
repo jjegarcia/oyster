@@ -39,4 +39,9 @@ describe OysterCard do
     subject.travelable?
     expect(subject.travelable?).to eq true
   end
+  it "should be charged with penalty fare if not touch in or out" do
+    subject = OysterCard.new(20)
+    subject.check_valid
+    expect(subject.balance).to eq 5
+  end
 end

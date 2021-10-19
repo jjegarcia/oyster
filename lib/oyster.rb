@@ -6,6 +6,7 @@ INITIAL_BALANCE = 0
 MAX_BALANCE = 30
 MINIMUM_BALANCE = 1.80
 COMPLETED_JOURNEY_FARE = 4.50
+PENALTY_FARE = 15
 
 class OysterCard
   attr_reader :balance, :in, :entry_point, :exit_point, :journeys
@@ -47,5 +48,9 @@ class OysterCard
 
   def show_journeys
     @journeys
+  end
+
+  def check_valid
+    deduct(PENALTY_FARE) if entry_point == "" || exit_point = ""
   end
 end
