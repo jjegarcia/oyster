@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "journey"
 
 INITIAL_BALANCE = 0
