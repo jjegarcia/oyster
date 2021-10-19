@@ -19,17 +19,17 @@ describe OysterCard do
     subject.add_balance(10)
     expect(subject.deduct(4.50)).to eq 5.50
   end
-  it "should set a minimum journey requirment of balance" do
+  it "should set a minimum journey requirement of balance" do
     subject.add_balance(5)
     subject.travelable?
     expect(subject.travelable?).to eq true
   end
-  it "should set a minimum journey requirment of balance" do
+  it "should set a minimum journey requirement of balance" do
     subject.add_balance(1.5)
     subject.travelable?
     expect(subject.travelable?).to eq false
   end
-  it "should set a minimum journey requirment of balance" do
+  it "should set a minimum journey requirement of balance" do
     subject.add_balance(1.80)
     subject.travelable?
     expect(subject.travelable?).to eq true
@@ -51,5 +51,13 @@ describe OysterCard do
     subject.out("exit")
     subject.check_valid_journey
     expect(subject.balance).to eq 15.5
+  end
+  it "should report \"insufficient funds to travel\" if not travable" do
+    subject = OysterCard.new(0)
+    expect { subject.in("lalala") }.to raise_error "insufficient funds to travel"
+  end
+  it "should report \"insufficient funds to travel\" if not travable" do
+    subject = OysterCard.new(0)
+    expect { subject.out("lalala") }.to raise_error "insufficient funds to travel"
   end
 end

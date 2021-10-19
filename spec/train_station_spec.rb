@@ -6,12 +6,12 @@ require "journey"
 describe TrainStation do
   it "should let the card in" do
     subject = TrainStation.new("test_location")
-    oyster = OysterCard.new
+    oyster = OysterCard.new(40)
     expect(subject.in(oyster)).to eq true
   end
   it "should let a card out" do
     subject = TrainStation.new("test_location")
-    oyster = OysterCard.new
+    oyster = OysterCard.new(40)
     expect(subject.out(oyster)).to eq false
   end
   it "should deduct completed journey fare when leaving station" do
