@@ -1,14 +1,18 @@
-# frozen_string_literal: true
-
-require 'oyster'
+require "oyster"
 
 class TrainStation
+  attr_reader :location
+
+  def initialize(location = "")
+    @location = location
+  end
+
   def in(card)
-    card.in
+    card.in(@location)
   end
 
   def out(card)
-    card.out
+    card.out(@location)
   end
 
   def deduct(amount, card)
@@ -23,7 +27,7 @@ class TrainStation
     card.exit_point
   end
 
-  def show_last_journey(card)
+  def show_journeys(card)
     card.show_journeys
   end
 end

@@ -12,7 +12,7 @@ describe OysterCard do
   it 'should not have too much money' do
     subject = OysterCard.new
     subject.add_balance(10)
-    expect { subject.add_balance(100) }.to raise_error 'Excceded maximum balance'
+    expect { subject.add_balance(100) }.to raise_error 'Exceeded maximum balance'
   end
   it 'should deducted money from card' do
     subject = OysterCard.new

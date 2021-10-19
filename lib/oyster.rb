@@ -1,4 +1,4 @@
-# frozen_string_literal: true
+require "journey"
 
 INITIAL_BALANCE = 0
 MAX_BALANCE = 30
@@ -11,31 +11,31 @@ class OysterCard
   def initialize(balance = INITIAL_BALANCE)
     @balance = balance
     @in = false
-    @entry_point = ''
-    @exit_point = ''
+    @entry_point = ""
+    @exit_point = ""
     @journeys = []
   end
 
   def add_balance(money)
-    recieving_value = money + @balance
-    raise 'Excceded maximum balance' unless recieving_value <= MAX_BALANCE
+    receiving_value = money + @balance
+    raise "Exceeded maximum balance" unless receiving_value <= MAX_BALANCE
 
-    @balance = recieving_value
+    @balance = receiving_value
   end
 
   def deduct(amount)
     @balance -= amount
   end
 
-  def in
-    @entry_point = 'St pancrass'
+  def in(entry_point)
+    @entry_point = entry_point
     @in = true
   end
 
-  def out
+  def out(exit_point)
     @balance -= COMPLETED_JOURNEY_FARE
-    @exit_point = 'Paddington'
-    @journeys << { @entry_point => @exit_point }
+    @exit_point = exit_point
+    @journeys << Journey.new(@entry_point, @exit_point)
     @in = false
   end
 
