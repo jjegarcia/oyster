@@ -1,43 +1,48 @@
-# Oyster
+# oyster_challenge
+<!-- In order to use public transport
+As a customer
+I want money on my card
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/oyster`. To experiment with that code, run `bin/console` for an interactive prompt.
+In order to keep using public transport
+As a customer
+I want to add money to my card
 
-TODO: Delete this and the text above, and describe your gem
+In order to protect my money
+As a customer
+I don't want to put too much money on my card -->
 
-## Installation
+<!-- In order to pay for my journey
+As a customer
+I need my fare deducted from my card -->
 
-Add this line to your application's Gemfile:
+<!-- In order to get through the barriers
+As a customer
+I need to touch in and out -->
 
-```ruby
-gem 'oyster'
-```
+<!-- In order to pay for my journey
+As a customer
+I need to have the minimum amount for a single journey -->
 
-And then execute:
+<!-- In order to pay for my journey
+As a customer
+I need to pay for my journey when it's complete -->
 
-    $ bundle install
+<!-- In order to pay for my journey
+As a customer
+I need to know where I've travelled from -->
 
-Or install it yourself as:
+In order to know where I have been
+As a customer
+I want to see to all my previous trips
 
-    $ gem install oyster
+In order to know how far I have travelled
+As a customer
+I want to know what zone a station is in
 
-## Usage
+In order to be charged correctly
+As a customer
+I need a penalty charge deducted if I fail to touch in or out
 
-TODO: Write usage instructions here
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/oyster. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/oyster/blob/master/CODE_OF_CONDUCT.md).
-
-## License
-
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
-## Code of Conduct
-
-Everyone interacting in the Oyster project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/oyster/blob/master/CODE_OF_CONDUCT.md).
+In order to be charged the correct amount
+As a customer
+I need to have the correct fare calculated

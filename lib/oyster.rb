@@ -8,8 +8,8 @@ COMPLETED_JOURNEY_FARE = 4.50
 class OysterCard
   attr_reader :balance, :in, :entry_point, :exit_point, :journeys
 
-  def initialize
-    @balance = INITIAL_BALANCE
+  def initialize(balance = INITIAL_BALANCE)
+    @balance = balance
     @in = false
     @entry_point = ''
     @exit_point = ''
