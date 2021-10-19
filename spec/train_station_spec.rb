@@ -47,4 +47,8 @@ describe TrainStation do
     expect(journeys[0].entry_point[:entry]).to eq "entry_location"
     expect(journeys[0].exit_point[:exit]).to eq "exit_location"
   end
+  it "should zone be displayed if requested" do
+    subject= TrainStation.new("any",3)
+    expect(subject.zone).to eq 3
+  end
 end

@@ -24,19 +24,19 @@ describe OysterCard do
   it "should set a minimum journey requirment of balance" do
     subject = OysterCard.new
     subject.add_balance(5)
-    subject.travellable?
-    expect(subject.travellable?).to eq true
+    subject.travelable?
+    expect(subject.travelable?).to eq true
   end
   it "should set a minimum journey requirment of balance" do
     subject = OysterCard.new
     subject.add_balance(1.5)
-    subject.travellable?
-    expect(subject.travellable?).to eq false
+    subject.travelable?
+    expect(subject.travelable?).to eq false
   end
   it "should set a minimum journey requirment of balance" do
     subject = OysterCard.new
     subject.add_balance(1.80)
-    subject.travellable?
-    expect(subject.travellable?).to eq true
+    subject.travelable?
+    expect(subject.travelable?).to eq true
   end
 end

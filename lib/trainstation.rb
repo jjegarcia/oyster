@@ -3,10 +3,11 @@
 require "oyster"
 
 class TrainStation
-  attr_reader :location
+  attr_reader :location, :zone
 
-  def initialize(location = "")
+  def initialize(location = "", zone = 0)
     @location = location
+    @zone = zone
   end
 
   def in(card)

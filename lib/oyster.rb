@@ -41,7 +41,7 @@ class OysterCard
     @in = false
   end
 
-  def travellable?
+  def travelable?
     @balance >= MINIMUM_BALANCE
   end
 
