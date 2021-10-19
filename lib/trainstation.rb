@@ -24,6 +24,6 @@ class TrainStation
   end
 
   def show_last_journey(card)
-    card.show_last_journey
+    card.show_journeys
   end
 end

@@ -43,7 +43,7 @@ class OysterCard
     @balance >= MINIMUM_BALANCE
   end
 
-  def show_last_journey
+  def show_journeys
     @journeys
   end
 end
