@@ -50,7 +50,7 @@ class OysterCard
     @journeys
   end
 
-  def check_valid
-    deduct(PENALTY_FARE) if entry_point == "" || exit_point = ""
+  def check_valid_journey
+    deduct(PENALTY_FARE) if entry_point == "" || exit_point == ""
   end
 end

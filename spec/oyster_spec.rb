@@ -41,7 +41,20 @@ describe OysterCard do
   end
   it "should be charged with penalty fare if not touch in or out" do
     subject = OysterCard.new(20)
-    subject.check_valid
+    subject.check_valid_journey
     expect(subject.balance).to eq 5
+  end
+  it "should be charged with penalty fare if not touch  out" do
+    subject = OysterCard.new(20)
+    subject.in("entry")
+    subject.check_valid_journey
+    expect(subject.balance).to eq 5
+  end
+  it "should not charge if touched in and out" do
+    subject = OysterCard.new(20)
+    subject.in("entry")
+    subject.out("exit")
+    subject.check_valid_journey
+    expect(subject.balance).to eq 15.5
   end
 end
