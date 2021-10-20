@@ -11,7 +11,8 @@ describe TrainStation do
   end
   it "should let a card out" do
     subject = TrainStation.new("test_location")
-    oyster = OysterCard.new(40)
+    oyster = OysterCard.new(20)
+    subject.in(oyster)
     expect(subject.out(oyster)).to eq false
   end
   it "should deduct completed journey fare when leaving station" do
@@ -32,6 +33,7 @@ describe TrainStation do
     card = OysterCard.new
     card.add_balance(15)
     subject = TrainStation.new("test_location")
+    subject.in(card)
     subject.out(card)
     expect(subject.exit_point(card)).to eq "test_location"
   end

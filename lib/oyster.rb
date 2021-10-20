@@ -31,6 +31,7 @@ class OysterCard
   end
 
   def in(entry_point)
+    raise "already in" if in?
     raise "insufficient funds to travel" unless travelable?
 
     @entry_point = entry_point
@@ -38,6 +39,8 @@ class OysterCard
   end
 
   def out(exit_point)
+    raise "already out" unless in?
+
     @balance -= COMPLETED_JOURNEY_FARE
     raise "insufficient funds to travel" unless travelable?
 
@@ -48,6 +51,10 @@ class OysterCard
 
   def travelable?
     @balance >= MINIMUM_BALANCE
+  end
+
+  def in?
+    @in == true
   end
 
   def show_journeys
