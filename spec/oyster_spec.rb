@@ -71,5 +71,4 @@ describe OysterCard do
     subject.deduct(20)
     expect { subject.out("lalala") }.to raise_error "insufficient funds to travel"
   end
-
 end
